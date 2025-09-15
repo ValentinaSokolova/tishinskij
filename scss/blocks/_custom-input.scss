@@ -1,0 +1,35 @@
+.custom-input {
+  position: relative;
+  $root: &;
+
+  &__field {
+    border: 1px solid transparent;
+    background-color: rgba($color-jaguar, .05);
+    border-radius: 200px;
+    font-size: 17px;
+    line-height: 1.5;
+    padding: 15px 20px;
+    width: 100%;
+    outline: none;
+    transition: background-color 0.3s ease;
+
+    &::placeholder {
+      color: rgba($color-jaguar, 0.3);
+    }
+    &:hover, &:focus {
+      background-color: rgba($color-jaguar, 0.3);
+
+      &::placeholder {
+        color: rgba($color-jaguar, 0.5)
+      }
+    }
+
+    &:error {
+      color: $color-orange-red
+      elite-promo__error-text {
+        display: block;
+      }
+    }
+  }
+
+}
